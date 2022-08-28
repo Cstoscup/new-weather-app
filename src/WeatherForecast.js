@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./weather.css"
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay"
+import { RotatingLines } from "react-loader-spinner";
 
 export default function WeatherForecast(props) {
     const [ready, setReady] = useState(false)
@@ -70,6 +71,14 @@ export default function WeatherForecast(props) {
         )
     } else {
         load();
-        return "loading..."
+        return (
+            <RotatingLines
+            strokeColor="grey"
+            strokeWidth="5"
+            animationDuration="0.75"
+            width="48"
+            visible={true}
+            />
+        )
     }
 }

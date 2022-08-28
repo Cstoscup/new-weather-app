@@ -3,6 +3,7 @@ import "./weather.css"
 import axios from "axios";
 import Date from "./Date";
 import WeatherForecast from "./WeatherForecast";
+import { RotatingLines } from "react-loader-spinner";
 
 export default function Weather(props) {
     const [weather, setWeather] = useState({ready: false})
@@ -93,7 +94,13 @@ export default function Weather(props) {
         return (
             <div className="Weather card">
                 <div className="card-body">
-                    <p>Loading...</p>
+                    <RotatingLines
+                        strokeColor="grey"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        width="48"
+                        visible={true}
+                    />
                 </div>
             </div>
         )
