@@ -1,0 +1,59 @@
+.card {
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+
+.Weather .search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Weather .search-bar {
+    width: 75%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin: 0 10px 0 0;
+}
+
+.Weather .search-button {
+    width: 25%;
+}
+
+.Weather h1, h5 {
+    text-align: left;
+}
+
+.Weather h1 {
+    margin: 0;
+}
+
+.Weather .icon {
+    overflow: hidden;
+    transform: scale(1.5);
+    height: 80px;
+    width: 20%;
+    vertical-align: middle;
+}
+
+.Weather .temp {
+    text-align: left;
+    font-size: 60px;
+    width: 30%;
+    margin: 7px 0 0 10px;
+}
+
+.Weather .temp-unit {
+    font-size: 16px;
+    position: relative;
+    top: -31px;
+}
+
+.Weather ul {
+    width: 50%;
+    list-style: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 13px;
+}
