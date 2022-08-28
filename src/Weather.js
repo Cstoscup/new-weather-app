@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import "./weather.css"
 import axios from "axios";
-import Date from "./Date"
+import Date from "./Date";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
     const [weather, setWeather] = useState({ready: false})
@@ -56,6 +57,8 @@ export default function Weather(props) {
                             <li>Wind Speed: {weather.wind} mph</li>
                         </ul>
                     </div>
+                    <hr />
+                    <WeatherForecast data={weather}/>
                 </div>
             </div>
         )
