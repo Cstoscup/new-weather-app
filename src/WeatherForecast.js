@@ -26,18 +26,46 @@ export default function WeatherForecast(props) {
 
     if (ready) {
         return(
-            <div className="row">
-                {forecast.map(function(dailyForecast, index) {
-                    if (index < 5) {
-                        return (
-                            <div className="col" key={index}>
-                                <WeatherForecastDay data={dailyForecast} />
-                            </div>
-                        )
-                    } else {
-                        return null;
-                    }
-                })}
+            <div>
+                <div className="row d-none d-sm-flex">
+                    {forecast.map(function(dailyForecast, index) {
+                        if (index < 5) {
+                            return (
+                                <div className="col" key={index}>
+                                    <WeatherForecastDay data={dailyForecast} />
+                                </div>
+                            )
+                        } else {
+                            return null;
+                        }
+                    })}
+                </div>
+                <div className="row d-flex d-sm-none">
+                    {forecast.map(function(dailyForecast, index) {
+                        if (index < 3) {
+                            return (
+                                <div className="col" key={index}>
+                                    <WeatherForecastDay data={dailyForecast} />
+                                </div>
+                            )
+                        } else {
+                            return null;
+                        }
+                    })}
+                </div>
+                <div className="row d-flex d-sm-none mt-3">
+                    {forecast.map(function(dailyForecast, index) {
+                        if (index > 2 && index < 6) {
+                            return (
+                                <div className="col" key={index}>
+                                    <WeatherForecastDay data={dailyForecast} />
+                                </div>
+                            )
+                        } else {
+                            return null;
+                        }
+                    })}
+                </div>
             </div>
         )
     } else {

@@ -48,17 +48,22 @@ export default function Weather(props) {
                     </form>
                     <h1>{weather.city}</h1>
                     <Date response={weather} className="mb-4"/>
-                    <div className="d-flex">
+                    <div className="weather-info d-flex">
                         <img src={`images/${weather.icon}.svg`} alt={weather.description} className="icon" />
                         <h2 className="temp">{Math.round(weather.temperature)}°</h2>
-                        <ul>
+                        <ul className="big-screen d-none d-sm-block">
                             <li className="text-capitalize">{weather.description}</li>
                             <li>Humidity: {weather.humidity}%</li>
                             <li>Wind Speed: {weather.wind} mph</li>
                         </ul>
                     </div>
+                    <ul className="small-screen d-block d-sm-none">
+                        <li className="text-capitalize">{weather.description}</li>
+                        <li>Humidity: {weather.humidity}%</li>
+                        <li>Wind Speed: {weather.wind} mph</li>
+                    </ul>
                     <hr />
-                    <WeatherForecast data={weather}/>
+                    <WeatherForecast data={weather} className="mb-4"/>
                 </div>
             </div>
         )

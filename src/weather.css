@@ -63,11 +63,33 @@
     margin: 7px 0 0 10px;
 }
 
-.Weather ul {
+.Weather .big-screen {
     width: 50%;
     list-style: none;
     text-align: left;
     font-size: 16px;
     line-height: 1.25;
     margin-top: 13px;
+}
+
+.Weather .small-screen {
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+@media (max-width: 650px) {
+    .card {
+        max-width: 90%;
+    }
+    .weather-info {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .weather-info .temp {
+        font-size: 50px;
+        margin-top: 12px
+    }
 }
