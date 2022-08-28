@@ -37,6 +37,24 @@ export default function Weather(props) {
         event.preventDefault();
         search();
     }
+
+    function getLocation(event) {
+        event.preventDefault();
+        navigator.geolocation.getCurrentPosition(getCoordinates)
+      }
+    
+    function getCoordinates(position) {
+        let coordinates = [position.coords.latitude, position.coords.longitude];
+        searchCoords(coordinates)
+    }
+
+    function searchCoords(coordinates) {
+        let long = coordinates[1];
+        let lat = coordinates[0];
+        let apiKey = "9ed24e5c436afdb265857268e29a26c9";
+        let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
+        axios.get(url).then(handleResponse);
+    }
     
     if (weather.ready) {
         return (
@@ -45,6 +63,9 @@ export default function Weather(props) {
                     <form className="search mb-3">
                         <input type="search" onChange={handleChange} placeholder="Enter a location" className="search-bar"></input>
                         <input type="submit" onClick={handleClick} value="Search" className="btn btn-secondary shadow-sm search-button"/>
+                        <button className="btn btn-outline-secondary shadow-sm location-button" onClick={getLocation}>
+                            <i className="fa-solid fa-location-dot"></i>
+                        </button>
                     </form>
                     <h1>{weather.city}</h1>
                     <Date response={weather} className="mb-4"/>
