@@ -50,7 +50,7 @@ export default function Weather(props) {
                     <Date response={weather} className="mb-4"/>
                     <div className="d-flex">
                         <img src={`images/${weather.icon}.svg`} alt={weather.description} className="icon" />
-                        <h2 className="temp">{Math.round(weather.temperature)}<span className="temp-unit">°F</span></h2>
+                        <h2 className="temp">{Math.round(weather.temperature)}°</h2>
                         <ul>
                             <li className="text-capitalize">{weather.description}</li>
                             <li>Humidity: {weather.humidity}%</li>
