@@ -2,6 +2,11 @@
     max-width: 600px;
     display: block;
     margin: 20px auto;
+    border:2px solid #38598b !important;
+}
+
+.card-body {
+    color: #38598b !important;
 }
 
 .Weather .search {
@@ -11,7 +16,7 @@
 
 .Weather .search-bar {
     width: 70%;
-    border: 1px solid #ced4da;
+    border: 2px solid #38598b;
     border-radius: 0.25rem;
     margin: 0 10px 0 0;
 }
@@ -19,6 +24,14 @@
 .Weather .search-button {
     width: 20%;
     margin: 0 10px 0 0;
+    background-color: #38598b;
+    border: 2px solid #38598b;
+}
+
+.Weather .search-button:hover {
+    background-color: white;
+    color: #38598b;
+    border: 2px solid #38598b;
 }
 
 .Weather .location-button {
@@ -26,10 +39,19 @@
     text-align: center;
     font-size: 24px;
     padding: 0;
+    color: #38598b;
+    border: 2px solid #38598b;
+}
+
+.Weather .location-button:hover {
+    background-color: #38598b;
+    border: 2px solid #38598b;
+    color: white;
 }
 
 .Weather h1, h5 {
     text-align: left;
+    color: #38598b;
 }
 
 .Weather h1 {
