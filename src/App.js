@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <Weather defaultCity="New York" />
-      <p><a href="https://github.com/Cstoscup/new-weather-app" target="_blank">Open-source</a> code, by <a href='https://www.linkedin.com/in/callie-stoscup-475b1683/' target='_blank'>Callie Stoscup</a></p>
+      <p><a href="https://github.com/Cstoscup/new-weather-app" target="_blank" rel="noreferrer">Open-source</a> code, by <a href='https://www.linkedin.com/in/callie-stoscup-475b1683/' target='_blank' rel="noreferrer">Callie Stoscup</a></p>
     </div>
   );
 }
