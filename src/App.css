@@ -1,4 +1,13 @@
 .App {
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  color: #38598b;
+}
+
+.App a {
+  color: #38598b;
+}
+
+.App a:hover {
+  color: white;
 }
